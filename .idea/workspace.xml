@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e5b771-3368-4f48-b9e4-709ff263406c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/es-features/task1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/es-features/task1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/es-features/task2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/es-features/task2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="144">
+              <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/es-features/task1.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/es-features/task2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="528">
+              <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -42,8 +43,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/es-features/task1.js" />
+        <option value="$PROJECT_DIR$/src/es-features/task2.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -89,12 +91,6 @@
               <item name="andersen-js-course" type="b2602c69:ProjectViewProjectNode" />
               <item name="andersen-js-course" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="array-practice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="andersen-js-course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andersen-js-course" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="es-features" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -104,6 +100,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -136,12 +133,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559418039559</updated>
-      <workItem from="1559418040810" duration="1049000" />
+      <workItem from="1559418040810" duration="1980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1049000" />
+    <option name="totallyTimeSpent" value="1980000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -160,7 +157,7 @@
       <window_info id="Favorites" order="0" sideWeight="0.50141644" side_tool="true" weight="0.17118308" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49858356" visible="true" weight="0.16853933" />
       <window_info id="Structure" order="2" sideWeight="0.50141644" side_tool="true" weight="0.17118308" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49966952" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49966952" weight="0.31728044" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50033045" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -211,22 +208,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/array-practice/task1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="360">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/es-features/task1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/es-features/task2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/es-features/task1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="144">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
         </state>
       </provider>
     </entry>
