@@ -80,8 +80,8 @@
 
 // import { any } from './array-practice/task1';
 // import { arrayDiff } from './array-practice/task2';
-import { forEachRight } from './array-practice/task3';
-// import { task4Old, task4New } from './array-practice/task4';
+// import { forEachRight } from './array-practice/task3';
+import { union } from './array-practice/task4';
 // import { task5Old, task5New } from './array-practice/task5';
 // import { task6Old, task6New } from './array-practice/task6';
 // import { task7Old, task7New } from './array-practice/task7';
@@ -101,6 +101,11 @@ import { forEachRight } from './array-practice/task3';
 
 // console.log('=============');
 
-forEachRight([1, 2, 3, 4], val => console.log(val)); // 4 3 2 1
-console.log('=============');
-forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 word 6 true 5
+// forEachRight([1, 2, 3, 4], val => console.log(val)); // 4 3 2 1
+// console.log('=============');
+// forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 word 6 true 5
+
+// console.log('=============');
+
+console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
+console.log(union([3, 1, 2, 3, 2, 6], [2, 3, 2, 6, 7]));
