@@ -16,21 +16,21 @@
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
 
-function sort(arr) {
-  let sortedArr = [];
-
-  nextElement:
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < sortedArr.length; j++) {
-        if (sortedArr[j] === arr[i]) continue nextElement;
-      }
-      sortedArr.push(arr[i]);
-    }
-
-  return sortedArr;
-}
-
 export function arrayDiff(arr1, arr2) {
+  function sort(arr) {
+    let sortedArr = [];
+
+    nextElement:
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < sortedArr.length; j++) {
+          if (sortedArr[j] === arr[i]) continue nextElement;
+        }
+        sortedArr.push(arr[i]);
+      }
+
+    return sortedArr;
+  }
+
   arr1 = sort(arr1);
   arr2 = sort(arr2);
 
