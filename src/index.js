@@ -78,17 +78,23 @@
 // console.log('=============');
 
 
-import { any } from './array-practice/task1';
-// import { task2Old, task2New } from './es-features/task2';
-// import { task3Old, task3New } from './es-features/task3';
-// import { task4Old, task4New } from './es-features/task4';
-// import { task5Old, task5New } from './es-features/task5';
-// import { task6Old, task6New } from './es-features/task6';
-// import { task7Old, task7New } from './es-features/task7';
-// import { task8Old, task8New } from './es-features/task8';
-// import { task9Old, task9New } from './es-features/task9';
-// import { task10Old, task10New } from './es-features/task10';
+// import { any } from './array-practice/task1';
+import { arrayDiff } from './array-practice/task2';
+// import { task3Old, task3New } from './array-practice/task3';
+// import { task4Old, task4New } from './array-practice/task4';
+// import { task5Old, task5New } from './array-practice/task5';
+// import { task6Old, task6New } from './array-practice/task6';
+// import { task7Old, task7New } from './array-practice/task7';
+// import { task8Old, task8New } from './array-practice/task8';
+// import { task9Old, task9New } from './array-practice/task9';
+// import { task10Old, task10New } from './array-practice/task10';
 
-console.log(any([0, 1, 2, 0], x => x >= 2)); // true
-console.log(any([0, 0, 1, 0])); // true
-console.log(any([0, 0, 0, 0])); // true
+// console.log(any([0, 1, 2, 0], x => x >= 2)); // true
+// console.log(any([0, 0, 1, 0])); // true
+// console.log(any([0, 0, 0, 0])); // true
+
+// console.log('=============');
+
+console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
+console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
+console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
