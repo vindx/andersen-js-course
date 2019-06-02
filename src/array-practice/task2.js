@@ -16,32 +16,42 @@
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
 
+// export function arrayDiff(arr1, arr2) {
+//   function sort(arr) {
+//     let sortedArr = [];
+//
+//     nextElement:
+//       for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < sortedArr.length; j++) {
+//           if (sortedArr[j] === arr[i]) continue nextElement;
+//         }
+//         sortedArr.push(arr[i]);
+//       }
+//
+//     return sortedArr;
+//   }
+//
+//   arr1 = sort(arr1);
+//   arr2 = sort(arr2);
+//
+//   for (let i = arr1.length - 1; i >= 0; i--) {
+//     for (let j = arr2.length - 1; j >= 0; j--) {
+//       if (arr1[i] === arr2[j]) {
+//         arr1.splice(i, 1);
+//         arr2.splice(j, 1);
+//       }
+//     }
+//   }
+//
+//   return arr1.concat(arr2);
+// }
+
+
+
+//после решения task4 меня осинило :)
 export function arrayDiff(arr1, arr2) {
-  function sort(arr) {
-    let sortedArr = [];
+  arr1 = new Set(arr1);
+  arr2 = new Set(arr2);
 
-    nextElement:
-      for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < sortedArr.length; j++) {
-          if (sortedArr[j] === arr[i]) continue nextElement;
-        }
-        sortedArr.push(arr[i]);
-      }
-
-    return sortedArr;
-  }
-
-  arr1 = sort(arr1);
-  arr2 = sort(arr2);
-
-  for (let i = arr1.length - 1; i >= 0; i--) {
-    for (let j = arr2.length - 1; j >= 0; j--) {
-      if (arr1[i] === arr2[j]) {
-        arr1.splice(i, 1);
-        arr2.splice(j, 1);
-      }
-    }
-  }
-
-  return arr1.concat(arr2);
+  return [...new Set([...arr1].filter(x => !arr2.has(x)).concat([...arr2].filter(x => !arr1.has(x))))];
 }

@@ -79,9 +79,9 @@
 
 
 // import { any } from './array-practice/task1';
-// import { arrayDiff } from './array-practice/task2';
+ import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
-import { union } from './array-practice/task4';
+// import { union } from './array-practice/task4';
 // import { task5Old, task5New } from './array-practice/task5';
 // import { task6Old, task6New } from './array-practice/task6';
 // import { task7Old, task7New } from './array-practice/task7';
@@ -95,9 +95,9 @@ import { union } from './array-practice/task4';
 
 // console.log('=============');
 
-// console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
-// console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
-// console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
+console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
+console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
+console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
 
 // console.log('=============');
 
@@ -107,5 +107,5 @@ import { union } from './array-practice/task4';
 
 // console.log('=============');
 
-console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
-console.log(union([3, 1, 2, 3, 2, 6], [2, 3, 2, 6, 7]));
+// console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
+// console.log(union([3, 1, 2, 3, 2, 6], [2, 3, 2, 6, 7]));
