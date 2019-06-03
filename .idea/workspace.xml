@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e5b771-3368-4f48-b9e4-709ff263406c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/array-practice/task9.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/array-practice/task9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/array-practice/task10.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/array-practice/task10.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,16 +20,16 @@
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+              <caret line="151" selection-start-line="151" selection-end-line="151" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/array-practice/task9.js">
+        <entry file="file://$PROJECT_DIR$/src/array-practice/task10.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state relative-caret-position="490">
+              <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -60,8 +60,9 @@
         <option value="$PROJECT_DIR$/src/array-practice/task6.js" />
         <option value="$PROJECT_DIR$/src/array-practice/task7.js" />
         <option value="$PROJECT_DIR$/src/array-practice/task8.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/array-practice/task9.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/array-practice/task10.js" />
       </list>
     </option>
   </component>
@@ -158,12 +159,12 @@
       <workItem from="1559418040810" duration="8599000" />
       <workItem from="1559465437983" duration="13907000" />
       <workItem from="1559497163576" duration="19295000" />
-      <workItem from="1559555793326" duration="5765000" />
+      <workItem from="1559555793326" duration="6999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47566000" />
+    <option name="totallyTimeSpent" value="48800000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -179,7 +180,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50141644" side_tool="true" weight="0.17118308" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49858356" visible="true" weight="0.16853933" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49858356" visible="true" weight="0.16853933" />
       <window_info id="Structure" order="2" sideWeight="0.50141644" side_tool="true" weight="0.17118308" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5009914" side_tool="true" weight="0.31586403" />
@@ -321,9 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/array-practice/task10.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/array-practice/task5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -380,17 +378,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/array-practice/task9.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+        <state relative-caret-position="432">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/array-practice/task9.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state relative-caret-position="500">
+          <caret line="151" selection-start-line="151" selection-end-line="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/array-practice/task10.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
         </state>
       </provider>
     </entry>

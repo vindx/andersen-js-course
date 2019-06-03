@@ -86,8 +86,8 @@
 // import { transformArrayToNumber } from './array-practice/task6';
 // import { take } from './array-practice/task7';
 // import { without } from './array-practice/task8';
-import { indexOfAll } from './array-practice/task9';
-// import { task10Old, task10New } from './array-practice/task10';
+// import { indexOfAll } from './array-practice/task9';
+import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
 // console.log(any([0, 1, 2, 0], x => x >= 2)); // true
 // console.log(any([0, 0, 1, 0])); // true
@@ -143,6 +143,10 @@ import { indexOfAll } from './array-practice/task9';
 
 // console.log('=============');
 
-console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
-console.log(indexOfAll([1, 2, 3], 4)); // []
-console.log(indexOfAll([1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1], 1)); // [0, 1, 2, 3, 4, 5, 6, 8, 10]
+// console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
+// console.log(indexOfAll([1, 2, 3], 4)); // []
+// console.log(indexOfAll([1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1], 1)); // [0, 1, 2, 3, 4, 5, 6, 8, 10]
+
+// console.log('=============');
+
+console.log(membersOnActiveMeetups(meetups)); // 1500
