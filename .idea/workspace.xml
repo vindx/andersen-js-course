@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e5b771-3368-4f48-b9e4-709ff263406c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/array-practice/task6.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/array-practice/task6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/array-practice/task7.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/array-practice/task7.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,17 +19,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="126" column="80" selection-start-line="126" selection-start-column="80" selection-end-line="126" selection-end-column="80" />
+            <state relative-caret-position="490">
+              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/array-practice/task6.js">
+        <entry file="file://$PROJECT_DIR$/src/array-practice/task7.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="20" column="87" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="87" />
+            <state relative-caret-position="240">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="11" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -59,6 +58,7 @@
         <option value="$PROJECT_DIR$/src/array-practice/task2.js" />
         <option value="$PROJECT_DIR$/src/array-practice/task5.js" />
         <option value="$PROJECT_DIR$/src/array-practice/task6.js" />
+        <option value="$PROJECT_DIR$/src/array-practice/task7.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
@@ -156,12 +156,12 @@
       <workItem from="1559418040810" duration="8599000" />
       <workItem from="1559465437983" duration="13907000" />
       <workItem from="1559497163576" duration="19295000" />
-      <workItem from="1559555793326" duration="3705000" />
+      <workItem from="1559555793326" duration="4556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45506000" />
+    <option name="totallyTimeSpent" value="46357000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,13 +267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/array-practice/task7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/es-features/task4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -306,13 +299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/es-features/task10.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -364,17 +350,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/es-features/task10.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/array-practice/task6.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="20" column="87" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="87" />
+        <state relative-caret-position="226">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/array-practice/task7.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="11" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="126" column="80" selection-start-line="126" selection-start-column="80" selection-end-line="126" selection-end-column="80" />
+        <state relative-caret-position="490">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>
