@@ -82,8 +82,8 @@
 // import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
 // import { union } from './array-practice/task4';
-import { createGenerator } from './array-practice/task5';
-// import { task6Old, task6New } from './array-practice/task6';
+// import { createGenerator } from './array-practice/task5';
+ import { transformArrayToNumber } from './array-practice/task6';
 // import { task7Old, task7New } from './array-practice/task7';
 // import { task8Old, task8New } from './array-practice/task8';
 // import { task9Old, task9New } from './array-practice/task9';
@@ -112,12 +112,20 @@ import { createGenerator } from './array-practice/task5';
 
 // console.log('=============');
 
-const generator = createGenerator([1, '6', 3, 2]);
-console.log(generator.next()); // 1
-console.log(generator.next()); // '6'
-console.log(generator.next()); // 3
-console.log(generator.next()); // 2
-console.log(generator.next()); // 'Complete!'
-console.log(generator.next()); // 'Complete!'
-console.log(generator.next()); // 'Complete!'
-console.log(generator.next()); // 'Complete!'
+// const generator = createGenerator([1, '6', 3, 2]);
+// console.log(generator.next()); // 1
+// console.log(generator.next()); // '6'
+// console.log(generator.next()); // 3
+// console.log(generator.next()); // 2
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+
+// console.log('=============');
+
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60

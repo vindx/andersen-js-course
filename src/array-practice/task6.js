@@ -17,6 +17,17 @@
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); -> 60
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); -> 70
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); -> 0
+ *
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item), 1); -> 6000
+ * минут 5 сидел, думал почему показывает 0. Оказалось самая банальность - ", 1" за скобкой :)
+ *
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); -> -60
  */
+
+export function transformArrayToNumber(arr, callbackFunc, startParam = 0) {
+  let result = startParam;
+  for (const arg of arr) {
+    result = callbackFunc(result, arg);
+  }
+  return result;
+}
