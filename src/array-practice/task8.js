@@ -11,3 +11,10 @@
  * console.log(without([2, 1, 2, 3], 1, 2)) -> [3]
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
  */
+
+export function without(arr, ...elements) {
+  arr = new Set(arr);
+  let arr2 = new Set(elements);
+
+  return [...new Set([...arr].filter(x => !arr2.has(x)).concat([...arr2].filter(x => !arr.has(x))))];
+}
