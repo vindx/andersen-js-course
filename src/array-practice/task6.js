@@ -25,9 +25,5 @@
  */
 
 export function transformArrayToNumber(arr, callbackFunc, startParam = 0) {
-  let result = startParam;
-  for (const arg of arr) {
-    result = callbackFunc(result, arg);
-  }
-  return result;
+  return arr.reduce(callbackFunc, startParam);
 }

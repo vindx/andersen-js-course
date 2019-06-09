@@ -80,10 +80,10 @@
 
 // import { any } from './array-practice/task1';
 // import { arrayDiff } from './array-practice/task2';
-import { forEachRight } from './array-practice/task3';
+// import { forEachRight } from './array-practice/task3';
 // import { union } from './array-practice/task4';
 // import { createGenerator } from './array-practice/task5';
-// import { transformArrayToNumber } from './array-practice/task6';
+import { transformArrayToNumber } from './array-practice/task6';
 // import { take } from './array-practice/task7';
 // import { without } from './array-practice/task8';
 // import { indexOfAll } from './array-practice/task9';
@@ -101,9 +101,9 @@ import { forEachRight } from './array-practice/task3';
 
 // console.log('=============');
 
-forEachRight([1, 2, 3, 4], val => console.log(val)); // 4 3 2 1
-console.log('=============');
-forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 word 6 true 5
+// forEachRight([1, 2, 3, 4], val => console.log(val)); // 4 3 2 1
+// console.log('=============');
+// forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 word 6 true 5
 
 // console.log('=============');
 
@@ -124,11 +124,11 @@ forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 w
 
 // console.log('=============');
 
-// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
-// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
-// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
-// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
-// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60
 
 // console.log('=============');
 
