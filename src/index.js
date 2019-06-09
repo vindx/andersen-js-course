@@ -82,11 +82,11 @@
 // import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
 // import { union } from './array-practice/task4';
-import { createGenerator } from './array-practice/task5';
+// import { createGenerator } from './array-practice/task5';
 // import { transformArrayToNumber } from './array-practice/task6';
 // import { take } from './array-practice/task7';
 // import { without } from './array-practice/task8';
-// import { indexOfAll } from './array-practice/task9';
+import { indexOfAll } from './array-practice/task9';
 // import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
 // console.log(any([0, 1, 2, 0], x => x >= 2)); // true
@@ -112,15 +112,15 @@ import { createGenerator } from './array-practice/task5';
 
 // console.log('=============');
 
-const generator = createGenerator([1, '6', 3, 2]);
-console.log(generator.next()); // 1
-console.log(generator.next()); // '6'
-console.log(generator.next()); // 3
-console.log(generator.next()); // 2
-console.log(generator.next()); // 'Complete!'
-console.log(generator.next()); // 'Complete!'
-console.log(generator.next()); // 'Complete!'
-console.log(generator.next()); // 'Complete!'
+// const generator = createGenerator([1, '6', 3, 2]);
+// console.log(generator.next()); // 1
+// console.log(generator.next()); // '6'
+// console.log(generator.next()); // 3
+// console.log(generator.next()); // 2
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
 
 // console.log('=============');
 
@@ -142,9 +142,9 @@ console.log(generator.next()); // 'Complete!'
 
 // console.log('=============');
 
-// console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
-// console.log(indexOfAll([1, 2, 3], 4)); // []
-// console.log(indexOfAll([1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1], 1)); // [0, 1, 2, 3, 4, 5, 6, 8, 10]
+console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
+console.log(indexOfAll([1, 2, 3], 4)); // []
+console.log(indexOfAll([1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1], 1)); // [0, 1, 2, 3, 4, 5, 6, 8, 10]
 
 // console.log('=============');
 

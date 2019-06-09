@@ -12,9 +12,5 @@
  */
 
 export function indexOfAll(arr, num) {
-  let newArr = [];
-  arr.forEach((arg, index) => {
-    if (arg === num) newArr.push(index);
-  });
-  return newArr;
+  return arr.reduce((indexes, arg, index) => arg === num ? [...indexes, index] : indexes, []);
 }
