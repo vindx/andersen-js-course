@@ -49,8 +49,5 @@
 
 //после решения task4 меня осинило :)
 export function arrayDiff(arr1, arr2) {
-  const setFromArr1 = new Set(arr1);
-  const setFromArr2 = new Set(arr2);
-
-  return [...new Set([...setFromArr1].filter(x => !setFromArr2.has(x))), ...new Set([...setFromArr2].filter(x => !setFromArr1.has(x)))];
+  return [...arr1.filter(x => !new Set(arr2).has(x)), ...arr2.filter(x => !new Set(arr1).has(x))];
 }
