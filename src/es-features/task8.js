@@ -33,11 +33,9 @@ export function task8New() {
     nums: [0, 2, 5, 10, 15],
     fives: [],
     calculateNumsFive() {
-      for (let arg of this.nums) {
-        if (arg % 5 === 0) {
-          this.fives.push(arg);
-        }
-      }
+      this.nums.forEach(arg => {
+        if (arg % 5 === 0) this.fives.push(arg);
+      });
 
       return this.fives;
     },
