@@ -42,13 +42,9 @@ export function task6New() {
     name,
     value,
     role: { name: role },
-    isActive,
-    cases: [{id: firstCaseId}]
+    isActive: active = false,
+    cases: [{ id: firstCaseId }],
   } = userModule();
-
-  //сколько не пытался вставить блок с проверкой внутрь объекта, все тщетно
-  //пришлось выкинуть проверку за объект
-  const active = isActive === undefined ? false : isActive;
 
   return [name, value, role, active, firstCaseId];
 }
