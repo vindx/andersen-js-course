@@ -15,6 +15,10 @@
  */
 
 export function* createGenerator(arr) {
-  for (let arg of arr) yield arg;
-  while (true) yield 'Complete!';
+  for (let arg of arr) {
+    yield arg;
+  }
+  while (true) {
+    yield 'Complete!';
+  }
 }
