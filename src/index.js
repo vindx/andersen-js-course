@@ -79,8 +79,8 @@
 
 
 // import { any } from './array-practice/task1';
-import { arrayDiff } from './array-practice/task2';
-// import { forEachRight } from './array-practice/task3';
+// import { arrayDiff } from './array-practice/task2';
+import { forEachRight } from './array-practice/task3';
 // import { union } from './array-practice/task4';
 // import { createGenerator } from './array-practice/task5';
 // import { transformArrayToNumber } from './array-practice/task6';
@@ -95,15 +95,15 @@ import { arrayDiff } from './array-practice/task2';
 
 // console.log('=============');
 
-console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
-console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
-console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
+// console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
+// console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
+// console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
 
 // console.log('=============');
 
-// forEachRight([1, 2, 3, 4], val => console.log(val)); // 4 3 2 1
-// console.log('=============');
-// forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 word 6 true 5
+forEachRight([1, 2, 3, 4], val => console.log(val)); // 4 3 2 1
+console.log('=============');
+forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 word 6 true 5
 
 // console.log('=============');
 
