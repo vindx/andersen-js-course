@@ -15,9 +15,5 @@ export function task3Old(params) {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task3New(args) {
-  let arr = [1, 2];
-  for (let arg of args) {
-    arr.push(arg);
-  }
-  return arr;
+  return [1, 2, ...args];
 }
