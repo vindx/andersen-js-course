@@ -78,8 +78,8 @@
 // console.log('=============');
 
 
-import { any } from './array-practice/task1';
-// import { arrayDiff } from './array-practice/task2';
+// import { any } from './array-practice/task1';
+import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
 // import { union } from './array-practice/task4';
 // import { createGenerator } from './array-practice/task5';
@@ -89,15 +89,15 @@ import { any } from './array-practice/task1';
 // import { indexOfAll } from './array-practice/task9';
 // import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
-console.log(any([0, 1, 2, 0], x => x >= 2)); // true
-console.log(any([0, 0, 1, 0])); // true
-console.log(any([0, 0, 0, 0])); // false
+// console.log(any([0, 1, 2, 0], x => x >= 2)); // true
+// console.log(any([0, 0, 1, 0])); // true
+// console.log(any([0, 0, 0, 0])); // false
 
 // console.log('=============');
 
-// console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
-// console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
-// console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
+console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
+console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
+console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
 
 // console.log('=============');
 
