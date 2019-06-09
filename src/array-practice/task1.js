@@ -15,6 +15,6 @@
  * console.log(any([0, 0, 0, 0])); -> false
  */
 
-export function any(arr, callback) {
-  return callback === undefined ? arr.some(arg => arg == true) : arr.filter(callback).length > 0 ? true : false;
+export function any(arr, callback = x => x == true) {
+  return arr.some(callback);
 }

@@ -24,7 +24,7 @@
 // import { task6Old, task6New } from './es-features/task6';
 // import { task7Old, task7New } from './es-features/task7';
 // import { task8Old, task8New } from './es-features/task8';
-import { task9Old, task9New } from './es-features/task9';
+// import { task9Old, task9New } from './es-features/task9';
 // import { task10Old, task10New } from './es-features/task10';
 
 // console.log('task1 old', task1Old(10) === 500); // true
@@ -67,8 +67,8 @@ import { task9Old, task9New } from './es-features/task9';
 //
 // console.log('=============');
 
-console.log('task9 old', task9Old()); // [true, 1]
-console.log('task9 new', task9New()); // [true, 1]
+// console.log('task9 old', task9Old()); // [true, 1]
+// console.log('task9 new', task9New()); // [true, 1]
 
 // console.log('=============');
 
@@ -78,7 +78,7 @@ console.log('task9 new', task9New()); // [true, 1]
 // console.log('=============');
 
 
-// import { any } from './array-practice/task1';
+import { any } from './array-practice/task1';
 // import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
 // import { union } from './array-practice/task4';
@@ -89,9 +89,9 @@ console.log('task9 new', task9New()); // [true, 1]
 // import { indexOfAll } from './array-practice/task9';
 // import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
-// console.log(any([0, 1, 2, 0], x => x >= 2)); // true
-// console.log(any([0, 0, 1, 0])); // true
-// console.log(any([0, 0, 0, 0])); // false
+console.log(any([0, 1, 2, 0], x => x >= 2)); // true
+console.log(any([0, 0, 1, 0])); // true
+console.log(any([0, 0, 0, 0])); // false
 
 // console.log('=============');
 
