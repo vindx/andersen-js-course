@@ -83,9 +83,9 @@
 // import { forEachRight } from './array-practice/task3';
 // import { union } from './array-practice/task4';
 // import { createGenerator } from './array-practice/task5';
-import { transformArrayToNumber } from './array-practice/task6';
+// import { transformArrayToNumber } from './array-practice/task6';
 // import { take } from './array-practice/task7';
-// import { without } from './array-practice/task8';
+import { without } from './array-practice/task8';
 // import { indexOfAll } from './array-practice/task9';
 // import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
@@ -124,11 +124,11 @@ import { transformArrayToNumber } from './array-practice/task6';
 
 // console.log('=============');
 
-console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
-console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
-console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
-console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
-console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60
 
 // console.log('=============');
 
@@ -137,9 +137,8 @@ console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); //
 
 // console.log('=============');
 
-// console.log(without([2, 1, 2, 3], 1, 2)); // [3]
-// console.log(without([2, 1, 10, 20], 1, 2)); // [10, 20]
-// console.log(without([2, 'c', 1, 2, 7, 3], 'd', 'c', 2, 1, 6, 3)); // [7, "d", 6]
+console.log(without([2, 1, 2, 3], 1, 2)); // [3]
+console.log(without([2, 1, 10, 20], 1, 2)); // [10, 20]
 
 // console.log('=============');
 

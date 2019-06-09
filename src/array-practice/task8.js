@@ -13,8 +13,6 @@
  */
 
 export function without(arr, ...elements) {
-  arr = new Set(arr);
-  let arr2 = new Set(elements);
-
-  return [...new Set([...arr].filter(x => !arr2.has(x)).concat([...arr2].filter(x => !arr.has(x))))];
+  const arr2 = new Set(elements);
+  return arr.filter(arg => !arr2.has(arg));
 }
