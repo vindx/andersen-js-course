@@ -19,11 +19,9 @@ export const meetups = [
 
 export function membersOnActiveMeetups(arr) {
   let sum = 0;
-  for (let key in arr) {
-    if (arr[key]['isActive'] === true) {
-      sum += arr[key]['members'];
-    }
-  }
+  arr.forEach(arg => {
+    if (arg.isActive === true) sum += arg.members;
+  });
 
   return sum;
 }
