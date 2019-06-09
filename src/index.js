@@ -85,8 +85,8 @@
 // import { createGenerator } from './array-practice/task5';
 // import { transformArrayToNumber } from './array-practice/task6';
 // import { take } from './array-practice/task7';
-import { without } from './array-practice/task8';
-// import { indexOfAll } from './array-practice/task9';
+// import { without } from './array-practice/task8';
+import { indexOfAll } from './array-practice/task9';
 // import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
 // console.log(any([0, 1, 2, 0], x => x >= 2)); // true
@@ -137,14 +137,14 @@ import { without } from './array-practice/task8';
 
 // console.log('=============');
 
-console.log(without([2, 1, 2, 3], 1, 2)); // [3]
-console.log(without([2, 1, 10, 20], 1, 2)); // [10, 20]
+// console.log(without([2, 1, 2, 3], 1, 2)); // [3]
+// console.log(without([2, 1, 10, 20], 1, 2)); // [10, 20]
 
 // console.log('=============');
 
-// console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
-// console.log(indexOfAll([1, 2, 3], 4)); // []
-// console.log(indexOfAll([1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1], 1)); // [0, 1, 2, 3, 4, 5, 6, 8, 10]
+console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
+console.log(indexOfAll([1, 2, 3], 4)); // []
+console.log(indexOfAll([1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1], 1)); // [0, 1, 2, 3, 4, 5, 6, 8, 10]
 
 // console.log('=============');
 

@@ -13,8 +13,8 @@
 
 export function indexOfAll(arr, num) {
   let newArr = [];
-  for (let key in arr) {
-    if (arr[key] === num) newArr.push(Number(key));
-  }
+  arr.forEach((arg, index) => {
+    if (arg === num) newArr.push(index);
+  });
   return newArr;
 }
