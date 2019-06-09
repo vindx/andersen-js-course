@@ -18,10 +18,9 @@ export const meetups = [
 ];
 
 export function membersOnActiveMeetups(arr) {
-  let sum = 0;
-  arr.forEach(arg => {
-    if (arg.isActive === true) sum += arg.members;
-  });
-
-  return sum;
+  const [...newArr] = arr; //это не полная копия массива,
+  // т.к. вложенные объекты всё равно ссылаются на оригиналы,
+  // но если сделать деструктуризацию вложенных объектов [{...obj1},{...obj2},{...obj3},{...obj4}]
+  // то не совсем понимаю как с ними работать
+  return newArr.reduce((sum, arg) => arg.isActive === true ? sum + arg.members : sum, 0);
 }
