@@ -12,9 +12,9 @@
  *
  * console.log(any([0, 1, 2, 0], x => x >= 2)); -> true
  * console.log(any([0, 0, 1, 0])); -> true
- * console.log(any([0, 0, 0, 0])); -> false --- исходя из условия (отсутвие колбек-функции) возвращается true
+ * console.log(any([0, 0, 0, 0])); -> false
  */
 
 export function any(arr, callback) {
-  return callback === undefined ? true : arr.filter(callback).length > 0 ? true : false;
+  return callback === undefined ? arr.some(arg => arg == true) : arr.filter(callback).length > 0 ? true : false;
 }
