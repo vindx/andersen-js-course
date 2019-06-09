@@ -11,5 +11,6 @@
  */
 
 export function forEachRight(arr, callback) {
-  return arr.reverse().forEach(callback);
+  const reversedArr = arr;
+  return reversedArr.reverse().forEach(callback);
 }
