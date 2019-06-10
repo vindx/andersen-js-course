@@ -19,7 +19,7 @@
 // import { task1Old, task1New } from './es-features/task1';
 // import { task2Old, task2New } from './es-features/task2';
 // import { task3Old, task3New } from './es-features/task3';
-// import { task4Old, task4New } from './es-features/task4';
+import { task4Old, task4New } from './es-features/task4';
 // import { task5Old, task5New } from './es-features/task5';
 // import { task6Old, task6New } from './es-features/task6';
 // import { task7Old, task7New } from './es-features/task7';
@@ -42,8 +42,8 @@
 
 // console.log('=============');
 
-// console.log('task4 old', task4Old()); // {x: 10, y: 10, bar: function, baztest: 'new field'}
-// console.log('task4 new', task4New()); // {x: 10, y: 10, bar: function, baztest: 'new field'}
+console.log('task4 old', task4Old()); // {x: 10, y: 10, bar: function, baztest: 'new field'}
+console.log('task4 new', task4New()); // {x: 10, y: 10, bar: function, baztest: 'new field'}
 
 // console.log('=============');
 
@@ -87,7 +87,7 @@
 // import { take } from './array-practice/task7';
 // import { without } from './array-practice/task8';
 // import { indexOfAll } from './array-practice/task9';
-import { membersOnActiveMeetups, meetups } from './array-practice/task10';
+// import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
 // console.log(any([0, 1, 2, 0], x => x >= 2)); // true
 // console.log(any([0, 0, 1, 0])); // true
@@ -148,4 +148,4 @@ import { membersOnActiveMeetups, meetups } from './array-practice/task10';
 
 // console.log('=============');
 
-console.log(membersOnActiveMeetups(meetups)); // 1500
+// console.log(membersOnActiveMeetups(meetups)); // 1500
