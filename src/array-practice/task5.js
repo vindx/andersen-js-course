@@ -13,3 +13,12 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+export function* createGenerator(arr) {
+  for (let arg of arr) {
+    yield arg;
+  }
+  while (true) {
+    yield 'Complete!';
+  }
+}

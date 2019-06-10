@@ -28,4 +28,14 @@ export function task8Old() {
 // Напишите реализацию функции task8Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task8New() {}
+export function task8New() {
+  let obj = {
+    nums: [0, 2, 5, 10, 15],
+    fives: [],
+    calculateNumsFive() {
+      return this.nums.reduce((acc, arg) => arg % 5 === 0 ? [...acc, arg] : acc, this.fives);
+    },
+  };
+
+  return obj.calculateNumsFive();
+}

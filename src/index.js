@@ -23,7 +23,7 @@
 // import { task5Old, task5New } from './es-features/task5';
 // import { task6Old, task6New } from './es-features/task6';
 // import { task7Old, task7New } from './es-features/task7';
-// import { task8Old, task8New } from './es-features/task8';
+import { task8Old, task8New } from './es-features/task8';
 // import { task9Old, task9New } from './es-features/task9';
 // import { task10Old, task10New } from './es-features/task10';
 
@@ -59,12 +59,12 @@
 
 // console.log('task7 old', task7Old()); // {test: 0, foo: 1, bar: 2}
 // console.log('task7 new', task7New()); // {test: 0, foo: 1, bar: 2}
-
+//
 // console.log('=============');
 
-// console.log('task8 old', task8Old()); // [0, 5, 10, 15]
-// console.log('task8 new', task8New()); // [0, 5, 10, 15]
-
+console.log('task8 old', task8Old()); // [0, 5, 10, 15]
+console.log('task8 new', task8New()); // [0, 5, 10, 15]
+//
 // console.log('=============');
 
 // console.log('task9 old', task9Old()); // [true, 1]
@@ -76,3 +76,76 @@
 // console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 // console.log('=============');
+
+
+// import { any } from './array-practice/task1';
+// import { arrayDiff } from './array-practice/task2';
+// import { forEachRight } from './array-practice/task3';
+// import { union } from './array-practice/task4';
+// import { createGenerator } from './array-practice/task5';
+// import { transformArrayToNumber } from './array-practice/task6';
+// import { take } from './array-practice/task7';
+// import { without } from './array-practice/task8';
+// import { indexOfAll } from './array-practice/task9';
+// import { membersOnActiveMeetups, meetups } from './array-practice/task10';
+
+// console.log(any([0, 1, 2, 0], x => x >= 2)); // true
+// console.log(any([0, 0, 1, 0])); // true
+// console.log(any([0, 0, 0, 0])); // false
+
+// console.log('=============');
+
+// console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
+// console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
+// console.log(arrayDiff([1, 5, 4, 6, 7, 8, 9, 2], [1, 5, 4, 6, 7, 8, 9, 4, 2, 4, 9])); // []
+
+// console.log('=============');
+
+// forEachRight([1, 2, 3, 4], val => console.log(val)); // 4 3 2 1
+// console.log('=============');
+// forEachRight([5, true, 6, 'word', 7, 8, 4], val => console.log(val)); // 4 8 7 word 6 true 5
+
+// console.log('=============');
+
+// console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
+// console.log(union([3, 1, 2, 3, 2, 6], [2, 3, 2, 6, 7]));
+
+// console.log('=============');
+
+// const generator = createGenerator([1, '6', 3, 2]);
+// console.log(generator.next()); // 1
+// console.log(generator.next()); // '6'
+// console.log(generator.next()); // 3
+// console.log(generator.next()); // 2
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+// console.log(generator.next()); // 'Complete!'
+
+// console.log('=============');
+
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60
+
+// console.log('=============');
+
+// console.log(take([1, 2, 3], 5)); // [1, 2, 3]
+// console.log(take([1, 2, 3], 2)); // [1, 2]
+
+// console.log('=============');
+
+// console.log(without([2, 1, 2, 3], 1, 2)); // [3]
+// console.log(without([2, 1, 10, 20], 1, 2)); // [10, 20]
+
+// console.log('=============');
+
+// console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
+// console.log(indexOfAll([1, 2, 3], 4)); // []
+// console.log(indexOfAll([1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1], 1)); // [0, 1, 2, 3, 4, 5, 6, 8, 10]
+
+// console.log('=============');
+
+// console.log(membersOnActiveMeetups(meetups)); // 1500
