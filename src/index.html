@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Andersen JS Course</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Мастерская</title>
   </head>
   <body>
-    <h1>
-      Andersen JS Course
-    </h1>
+    <div class="messages_area">
+      <h2>Добро пожаловать в мастерскую.</h2>
+    </div>
+    <div class="wrapper">
+      <div class="recipes">
+        <h3>Рецепты</h3>
+        <div class="recipe">
+          Топор
+          <button class="delete_recipe">Удалить</button>
+          <li class="recipe_element">Палка</li>
+          <li class="recipe_element">Камень</li>
+        </div>
+        <button class="create_recipe">Добавить рецепт</button>
+      </div>
+
+      <div class="workbench">
+        <h3>Верстак</h3>
+        <div class="crafting_area">
+          <div class="recipe_area">
+            Рецепт перетащите сюда
+          </div>
+          <div class="items_area">
+            Предметы перетащите сюда
+            <div class="item">Палка</div>
+            <div class="item">Палка</div>
+          </div>
+        </div>
+        <button class="create_recipe_item">Создать предмет</button>
+      </div>
+
+      <div class="items">
+        <h3>Предметы</h3>
+        <div class="item">
+          Камень
+          <button class="delete_item">Удалить</button>
+        </div>
+        <button class="create_item">Добавить предмет</button>
+      </div>
+    </div>
   </body>
 </html>

@@ -3,6 +3,121 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.messages_area {
   text-align: center;
+}
+
+.messages_area h2 {
+  display: inline-block;
+  border-bottom: 3px solid #fcac45;
+  padding-bottom: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.recipes {
+  height: fit-content;
+  text-align: center;
+  width: 25%;
+  border: 1px solid black;
+}
+
+.recipe {
+  border: 1px solid #fcac45;
+  margin: 1%;
+  padding: 1%;
+  font-size: 20px;
+  text-align: left;
+  word-break: break-word;
+  position: relative;
+}
+
+.recipe li {
+  font-size: 15px;
+  padding-left: 5%;
+  display: none;
+}
+
+.recipe:hover li {
+  display: block;
+}
+
+.recipe button,
+.item button {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.recipe:hover .delete_recipe {
+  display: block;
+}
+
+.create_recipe,
+.create_item,
+.create_recipe_item {
+  margin-bottom: 1%;
+}
+
+.workbench {
+  height: fit-content;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 50%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.crafting_area {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recipe_area {
+  width: 50%;
+}
+
+.items_area {
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.item {
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid #fcac45;
+  font-size: 20px;
+  word-break: break-word;
+  position: relative;
+}
+
+.items {
+  height: fit-content;
+  text-align: center;
+  width: 25%;
+  border: 1px solid black;
+}
+
+.item:hover .delete_item {
+  display: block;
 }
