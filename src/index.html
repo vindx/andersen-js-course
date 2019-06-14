@@ -13,11 +13,31 @@
     <div class="wrapper">
       <div class="recipes">
         <h3>Рецепты</h3>
-        <div class="recipe">
-          Топор
-          <button class="delete_recipe">Удалить</button>
-          <li class="recipe_element">Палка</li>
-          <li class="recipe_element">Камень</li>
+        <div id="recipes_container">
+          <div class="recipe" draggable="true">
+            Топор
+            <button class="delete_button">Удалить</button>
+            <ul class="recipe_elements">
+              <li>Палка</li>
+              <li>Камень</li>
+            </ul>
+          </div>
+          <div class="recipe" draggable="true">
+            Топор
+            <button class="delete_button">Удалить</button>
+            <ul class="recipe_elements">
+              <li>Палка</li>
+              <li>Камень</li>
+            </ul>
+          </div>
+          <div class="recipe" draggable="true">
+            Топор
+            <button class="delete_button">Удалить</button>
+            <ul class="recipe_elements">
+              <li>Палка</li>
+              <li>Камень</li>
+            </ul>
+          </div>
         </div>
         <button class="create_recipe">Добавить рецепт</button>
       </div>
@@ -26,12 +46,12 @@
         <h3>Верстак</h3>
         <div class="crafting_area">
           <div class="recipe_area">
-            Рецепт перетащите сюда
+            <p>↓ Рецепт ↓</p>
+            <div id="workbench_recipe_container"></div>
           </div>
           <div class="items_area">
-            Предметы перетащите сюда
-            <div class="item">Палка</div>
-            <div class="item">Палка</div>
+            <p>↓ Предметы ↓</p>
+            <div id="workbench_items_container"></div>
           </div>
         </div>
         <button class="create_recipe_item">Создать предмет</button>
@@ -39,9 +59,16 @@
 
       <div class="items">
         <h3>Предметы</h3>
-        <div class="item">
-          Камень
-          <button class="delete_item">Удалить</button>
+        <div id="items_container">
+          <div class="item" draggable="true">
+            Камень
+            <button class="delete_button">Удалить</button>
+          </div>
+
+          <div class="item" draggable="true">
+            Палка
+            <button class="delete_button">Удалить</button>
+          </div>
         </div>
         <button class="create_item">Добавить предмет</button>
       </div>

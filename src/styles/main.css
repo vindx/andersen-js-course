@@ -46,14 +46,11 @@ li {
   position: relative;
 }
 
-.recipe li {
+.recipe_elements {
+  margin: 0;
   font-size: 15px;
-  padding-left: 5%;
+  padding-left: 10%;
   display: none;
-}
-
-.recipe:hover li {
-  display: block;
 }
 
 .recipe button,
@@ -65,7 +62,7 @@ li {
   display: none;
 }
 
-.recipe:hover .delete_recipe {
+.recipe:hover .delete_button {
   display: block;
 }
 
@@ -76,10 +73,10 @@ li {
 }
 
 .workbench {
-  height: fit-content;
   margin-left: 5%;
   margin-right: 5%;
-  width: 50%;
+  height: fit-content;
+  width: 40%;
   border: 1px solid black;
   text-align: center;
 }
@@ -96,13 +93,33 @@ li {
 }
 
 .items_area {
+  width: 50%;
   border-left: 1px solid black;
+}
+
+#workbench_items_container,
+#workbench_recipe_container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
-  width: 50%;
+}
+
+#workbench_recipe_container {
+  justify-content: center;
+}
+
+.items_area:hover .item .delete_button {
+  display: none;
+}
+
+.recipe_area:hover .recipe .delete_button {
+  display: none;
 }
 
 .item {
+  text-align: left;
   margin: 1%;
   padding: 1%;
   border: 1px solid #fcac45;
@@ -118,6 +135,6 @@ li {
   border: 1px solid black;
 }
 
-.item:hover .delete_item {
+.item:hover .delete_button {
   display: block;
 }
