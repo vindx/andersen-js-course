@@ -13,33 +13,17 @@
     <div class="wrapper">
       <div class="recipes">
         <h3>Рецепты</h3>
-        <div id="recipes_container">
-          <div class="recipe" draggable="true">
-            Топор
-            <button class="delete_button">Удалить</button>
-            <ul class="recipe_elements">
-              <li>Палка</li>
-              <li>Камень</li>
-            </ul>
-          </div>
-          <div class="recipe" draggable="true">
-            Топор
-            <button class="delete_button">Удалить</button>
-            <ul class="recipe_elements">
-              <li>Палка</li>
-              <li>Камень</li>
-            </ul>
-          </div>
-          <div class="recipe" draggable="true">
-            Топор
-            <button class="delete_button">Удалить</button>
-            <ul class="recipe_elements">
-              <li>Палка</li>
-              <li>Камень</li>
-            </ul>
-          </div>
-        </div>
-        <button class="create_recipe">Добавить рецепт</button>
+        <div id="recipes_container"></div>
+        <form class="create_recipe_area">
+          <label>
+            Новый предмет
+            <input id="create_recipe_input" type="text" placeholder="Обязательно к заполнению" />
+            Ингредиенты
+            <input class="plus_element" type="button" value="+" />
+            <input class="recipe_element_input" placeholder="Обязательно к заполнению" />
+          </label>
+          <button class="create_recipe">Добавить рецепт</button>
+        </form>
       </div>
 
       <div class="workbench">
@@ -59,19 +43,12 @@
 
       <div class="items">
         <h3>Предметы</h3>
-        <div id="items_container">
-          <div class="item" draggable="true">
-            Камень
-            <button class="delete_button">Удалить</button>
-          </div>
-
-          <div class="item" draggable="true">
-            Палка
-            <button class="delete_button">Удалить</button>
-          </div>
-        </div>
+        <div id="items_container"></div>
         <form class="create_item_area">
-          <label>Новый предмет <input id="create_item_input" type="text"/></label>
+          <label>
+            Новый предмет
+            <input id="create_item_input" type="text" placeholder="Обязательно к заполнению" />
+          </label>
           <button class="create_item">Добавить предмет</button>
         </form>
       </div>

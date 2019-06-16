@@ -1,6 +1,6 @@
 import { EventEmitter } from '../helpers';
 
-class ItemsModel extends EventEmitter {
+class RecipesModel extends EventEmitter {
   constructor(items = []) {
     super();
     this.items = items;
@@ -8,12 +8,14 @@ class ItemsModel extends EventEmitter {
 
   // [
   //  {
-  //    name: "Камень",
+  //    name: "Топор",
   //    id: "12312",
+  //    ingredients: ["Палка", "Камень"],
   //  },
   //  {
-  //    name: "Палка",
+  //    name: "Лук",
   //    id: "12332",
+  //    ingredients: ["Палка", "Веревка"],
   //  },
   //  ...
   // ];
@@ -25,11 +27,10 @@ class ItemsModel extends EventEmitter {
 
   deleteItem(id) {
     const index = this.items.findIndex(item => item.id === id);
-
     if (index > -1) {
       this.items.splice(index, 1);
     }
   }
 }
 
-export default ItemsModel;
+export default RecipesModel;

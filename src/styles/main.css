@@ -50,7 +50,7 @@ li {
   margin: 0;
   font-size: 15px;
   padding-left: 10%;
-  display: none;
+  display: block;
 }
 
 .recipe button,
@@ -136,7 +136,8 @@ li {
   border: 1px solid black;
 }
 
-.create_item_area {
+.create_item_area,
+.create_recipe_area {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,6 +145,27 @@ li {
   margin-top: 5%;
   border-top: 1px solid black;
   padding-top: 1%;
+}
+
+#create_recipe_input,
+#create_item_input {
+  width: 85%;
+  text-align: center;
+}
+
+.recipe_element_input {
+  text-align: center;
+  width: 70%;
+}
+
+.create_recipe_area label {
+  position: relative;
+}
+
+.plus_element {
+  position: absolute;
+  bottom: 0;
+  left: 86%;
 }
 
 .item:hover .delete_button {

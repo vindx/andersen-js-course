@@ -1,4 +1,4 @@
-class ItemsController {
+class RecipesController {
   constructor(model, view) {
     this.model = model;
     this.view = view;
@@ -13,6 +13,7 @@ class ItemsController {
     const item = this.model.addItem({
       name,
       id: Date.now(),
+      ingredients: this.view.getIngredients(),
     });
 
     this.view.addItem(item);
@@ -24,4 +25,4 @@ class ItemsController {
   }
 }
 
-export default ItemsController;
+export default RecipesController;

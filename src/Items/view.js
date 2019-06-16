@@ -1,6 +1,6 @@
 import { createElement, EventEmitter } from '../helpers';
 
-class View extends EventEmitter {
+class ItemsView extends EventEmitter {
   constructor() {
     super();
     this.form = document.querySelector('.create_item_area');
@@ -70,4 +70,4 @@ class View extends EventEmitter {
   }
 }
 
-export default View;
+export default ItemsView;
