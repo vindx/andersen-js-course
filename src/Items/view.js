@@ -1,4 +1,5 @@
 import { createElement, EventEmitter } from '../helpers';
+import { dragStart, dragEnd } from '../DnD/dnd';
 
 class ItemsView extends EventEmitter {
   constructor() {
@@ -14,7 +15,13 @@ class ItemsView extends EventEmitter {
     const deleteButton = createElement('button', { className: 'delete_button' }, 'Удалить');
     const listItem = createElement(
       'div',
-      { className: 'item', draggable: 'true', 'data-id': item.id },
+      {
+        className: 'item',
+        draggable: 'true',
+        ondragstart: dragStart.bind(this.list, item.id),
+        ondragend: dragEnd.bind(this.list, item.id),
+        'data-id': item.id,
+      },
       item.name,
       deleteButton
     );
@@ -37,7 +44,7 @@ class ItemsView extends EventEmitter {
   handleAdd(event) {
     event.preventDefault();
 
-    if (this.input.value !== '') {
+    if (this.input.value.replace(/\s/g, '') !== '') {
       this.emit('add', this.input.value);
     }
   }

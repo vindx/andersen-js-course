@@ -1,4 +1,5 @@
 import { createElement, EventEmitter } from '../helpers';
+import { dragStart, dragEnd, showIngredients } from '../DnD/dnd';
 
 class RecipesView extends EventEmitter {
   constructor() {
@@ -21,7 +22,11 @@ class RecipesView extends EventEmitter {
   }
 
   createElement(item) {
-    const deleteButton = createElement('button', { className: 'delete_button' }, 'Удалить');
+    const deleteButton = createElement(
+      'button',
+      { className: 'delete_button', onclick: event => event.stopPropagation() },
+      'Удалить'
+    );
     const liArray = item.ingredients.reduce(
       (acc, element) => [...acc, createElement('li', {}, element)],
       []
@@ -29,7 +34,14 @@ class RecipesView extends EventEmitter {
     const ul = createElement('ul', { className: 'recipe_elements' }, ...liArray);
     const listItem = createElement(
       'div',
-      { className: 'recipe', draggable: 'true', 'data-id': item.id },
+      {
+        className: 'recipe',
+        draggable: 'true',
+        onclick: showIngredients.bind(this.list, item.id),
+        ondragstart: dragStart.bind(this.list, item.id),
+        ondragend: dragEnd.bind(this.list, item.id),
+        'data-id': item.id,
+      },
       item.name,
       ul,
       deleteButton
@@ -61,7 +73,10 @@ class RecipesView extends EventEmitter {
     event.preventDefault();
     const firstIngredient = this.form.querySelector('.recipe_element_input');
 
-    if (this.input.value !== '' && firstIngredient.value !== '') {
+    if (
+      this.input.value.replace(/\s/g, '') !== '' &&
+      firstIngredient.value.replace(/\s/g, '') !== ''
+    ) {
       this.emit('add', this.input.value);
     }
   }

@@ -1,12 +1,21 @@
 import './styles/main.css';
-import './DnD/dnd';
-import ItemsModel from './Items/model';
-import ItemsView from './Items/view';
-import ItemsController from './Items/controller';
 
-import RecipesModel from './Recipes/model';
-import RecipesView from './Recipes/view';
-import RecipesController from './Recipes/controller';
+import Model from './MVC/model';
+import View from './MVC/view';
+import Controller from './MVC/controller';
+
+const startingRecipes = [
+  {
+    name: 'Топор',
+    id: Date.now() + 1,
+    ingredients: ['Палка', 'Камень'],
+  },
+  {
+    name: 'Простой лук',
+    id: Date.now() + 2,
+    ingredients: ['Палка', 'Веревка'],
+  },
+];
 
 const startingItems = [
   {
@@ -23,23 +32,6 @@ const startingItems = [
   },
 ];
 
-const startingRecipes = [
-  {
-    name: 'Топор',
-    id: Date.now() + 1,
-    ingredients: ['Палка', 'Камень'],
-  },
-  {
-    name: 'Простой лук',
-    id: Date.now() + 2,
-    ingredients: ['Палка', 'Веревка'],
-  },
-];
-
-const itemsModel = new ItemsModel(startingItems);
-const itemsView = new ItemsView();
-const itemsController = new ItemsController(itemsModel, itemsView); // eslint-disable-line no-unused-vars
-
-const recipesModel = new RecipesModel(startingRecipes);
-const recipesView = new RecipesView();
-const recipesController = new RecipesController(recipesModel, recipesView); // eslint-disable-line no-unused-vars
+const model = new Model(startingRecipes, startingItems);
+const view = new View();
+const controller = new Controller(model, view); // eslint-disable-line no-unused-vars
