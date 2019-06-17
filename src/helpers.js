@@ -36,4 +36,18 @@ class EventEmitter {
   }
 }
 
-export { createElement, EventEmitter };
+function myAlert(string) {
+  const messageArea = document.querySelector('.messages_area');
+  const alertMessage = messageArea.querySelector('h2');
+  alertMessage.textContent = string;
+  if (messageArea.style.visibility === 'hidden') {
+    messageArea.style.visibility = '';
+  } else {
+    messageArea.style.visibility = 'hidden';
+  }
+  setTimeout(function abc() {
+    messageArea.style.visibility = 'hidden';
+  }, 1000);
+}
+
+export { createElement, EventEmitter, myAlert };

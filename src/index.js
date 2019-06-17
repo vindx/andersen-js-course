@@ -20,15 +20,15 @@ const startingRecipes = [
 const startingItems = [
   {
     name: 'Камень',
-    id: Date.now() + 1,
+    id: Date.now() + 100,
   },
   {
     name: 'Палка',
-    id: Date.now() + 2,
+    id: Date.now() + 101,
   },
   {
     name: 'Веревка',
-    id: Date.now() + 3,
+    id: Date.now() + 103,
   },
 ];
 

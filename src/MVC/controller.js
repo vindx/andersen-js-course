@@ -10,6 +10,7 @@ class Controller {
 
     view.showRecipes(model.recipes);
     view.showItems(model.items);
+    // view.updateWorkbench();
   }
 
   addItem(name) {
