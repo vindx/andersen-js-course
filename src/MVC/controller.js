@@ -1,16 +1,11 @@
+import { ADD_ITEM, ADD_RECIPE, DELETE_ITEM, DELETE_RECIPE } from '../utilities/constants';
+
 class Controller {
   constructor(model, view) {
     this.model = model;
     this.view = view;
 
-    view.on('addItem', this.addItem.bind(this));
-    view.on('addRecipe', this.addRecipe.bind(this));
-    view.on('deleteItem', this.deleteItem.bind(this));
-    view.on('deleteRecipe', this.deleteRecipe.bind(this));
-
-    view.showRecipes(model.recipes);
-    view.showItems(model.items);
-    // view.updateWorkbench();
+    this.initialization(this.view, this.model);
   }
 
   addItem(name) {
@@ -40,6 +35,16 @@ class Controller {
   deleteRecipe(id) {
     this.model.deleteRecipe(id);
     this.view.deleteRecipe(id);
+  }
+
+  initialization(view, model) {
+    view.on(ADD_ITEM, this.addItem.bind(this));
+    view.on(ADD_RECIPE, this.addRecipe.bind(this));
+    view.on(DELETE_ITEM, this.deleteItem.bind(this));
+    view.on(DELETE_RECIPE, this.deleteRecipe.bind(this));
+
+    view.showRecipes(model.recipes);
+    view.showItems(model.items);
   }
 }
 

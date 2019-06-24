@@ -1,75 +1,59 @@
-import { createElement, EventEmitter, myAlert } from '../helpers';
-import { dragEnd, dragStart, showIngredients, drop, dragOverForRecipe } from '../DnD/dnd';
+import EventEmitter from '../EventEmitter/EventEmitter';
+import {
+  ADD_ITEM,
+  ADD_RECIPE,
+  DELETE_ITEM,
+  DELETE_RECIPE,
+  REPLACE_VOIDS,
+  ERROR_EMPTY_RECIPE_AREA,
+  ERROR_EMPTY_ITEMS_AREA,
+  ERROR_NOT_ENOUGH_ITEMS,
+  ERROR_EXTRA_ITEMS,
+  SUCCESS_CREATE_NEW_ITEM,
+  ERROR_EMPTY_INPUT,
+} from '../utilities/constants';
+import { createElement, myAlert } from '../utilities/helpers';
+import { dragEnd, dragStart, showIngredients, drop, dragOverForRecipe } from '../utilities/dnd';
 
 class View extends EventEmitter {
   constructor() {
     super();
-    // свойства, связанные с рецептами
-    this.recipeForm = document.querySelector('.create_recipe_area');
-    this.recipeInput = document.querySelector('#create_recipe_input');
-    this.recipeList = document.querySelector('#recipes_container');
-    this.recipeAddInputButton = this.recipeForm.querySelector('.plus_element');
 
-    this.recipeForm.addEventListener('submit', this.handleAddRecipe.bind(this));
-    this.recipeAddInputButton.addEventListener('click', this.handleAddInput.bind(this));
-
-    // свойства, связанные с предметами
-    this.itemForm = document.querySelector('.create_item_area');
-    this.itemInput = document.querySelector('#create_item_input');
-    this.itemList = document.querySelector('#items_container');
-
-    this.itemForm.addEventListener('submit', this.handleAddItem.bind(this));
-
-    // свойства, связанные с верстаком
-    this.recipeArea = document.querySelector('#workbench_recipe_container');
-    this.itemArea = document.querySelector('#workbench_items_container');
-    this.craftingButton = document.querySelector('.create_recipe_item');
-
-    // подписка зоны верстака для рецепта на события DnD
-    this.recipeArea.addEventListener('dragover', dragOverForRecipe.bind(this));
-    this.recipeArea.addEventListener('drop', drop.bind(this, this.recipeArea, this.recipeList));
-    this.recipeArea.addEventListener(
-      'dragleave',
-      drop.bind(this, this.recipeList, this.recipeArea)
-    );
-
-    // подписка зоны верстака для предметов на события DnD
-    this.itemArea.addEventListener('dragover', event => event.preventDefault());
-    this.itemArea.addEventListener('drop', drop.bind(this, this.itemArea, this.itemList));
-    this.itemArea.addEventListener('dragleave', drop.bind(this, this.itemList, this.itemArea));
-
-    this.craftingButton.addEventListener('click', this.handleCraftNewItem.bind(this));
+    this.declarationsAboutRecipes();
+    this.declarationsAboutItems();
   }
 
-  // основной и единственный метод для работы с ВЕРСТАКОМ
-  // основан на сравнении(фильтрации) массива ингредиентов(по рецепту) с массивом предметов(в верстаке)
+  // МЕТОДЫ ДЛЯ РАБОТЫ С ВЕРСТАКОМ
+
+  // проверка на наличие рецепта/предметов в верстаке
   handleCraftNewItem() {
     if (!this.recipeArea.childElementCount) {
-      myAlert('В верстаке нет рецепта! Исправь это, пожалуйста');
+      myAlert(ERROR_EMPTY_RECIPE_AREA);
     } else if (!this.itemArea.childElementCount) {
-      myAlert('В верстаке ни одного предмета! Исправь это, пожалуйста');
+      myAlert(ERROR_EMPTY_ITEMS_AREA);
     } else {
-      const newItemName = this.recipeArea.querySelector('div').childNodes[0].textContent;
-      const liArray = this.recipeArea.querySelectorAll('li');
-      const ingredients = Array.from(liArray).reduce(
-        (acc, element) => [...acc, element.textContent],
-        []
-      );
-      const itemsOnWorkbench = Array.from(this.itemArea.children).reduce(
-        (acc, element) => [...acc, element.childNodes[0].textContent],
-        []
-      );
-      const missingItems = ingredients.filter(value => !itemsOnWorkbench.includes(value));
-      const extraItems = itemsOnWorkbench.filter(value => !ingredients.includes(value));
+      this.createNewItem();
+    }
+  }
 
-      if (missingItems.length > 0) {
-        myAlert(`В рецепте не так! Тут не хватает "${missingItems}"`);
-      } else if (extraItems.length > 0) {
-        myAlert(`В верстаке есть лишние предметы: "${extraItems}"`);
-      } else {
-        myAlert(`Поздравляю! Ты создал(а) "${newItemName}"`);
-        this.emit('addItem', newItemName);
-      }
+  // сравнение(фильтрация) массива ингредиентов(по рецепту) с массивом предметов
+  createNewItem() {
+    const newItemName = this.recipeArea.querySelector('div').childNodes[0].textContent;
+    const liArray = this.recipeArea.querySelectorAll('li');
+    const ingredients = Array.from(liArray).map(element => element.textContent);
+    const itemsOnWorkbench = Array.from(this.itemArea.children).map(
+      element => element.childNodes[0].textContent
+    );
+    const missingItems = ingredients.filter(value => !itemsOnWorkbench.includes(value));
+    const extraItems = itemsOnWorkbench.filter(value => !ingredients.includes(value));
+
+    if (missingItems.length > 0) {
+      myAlert(`${ERROR_NOT_ENOUGH_ITEMS} "${missingItems}"`);
+    } else if (extraItems.length > 0) {
+      myAlert(`${ERROR_EXTRA_ITEMS} "${extraItems}"`);
+    } else {
+      myAlert(`${SUCCESS_CREATE_NEW_ITEM} "${newItemName}"`);
+      this.emit(ADD_ITEM, newItemName);
     }
   }
 
@@ -84,7 +68,7 @@ class View extends EventEmitter {
     );
   }
 
-  // метод создания рецепта как DOM элемент + подписка на события DnD
+  // метод создания рецепта как DOM элемент + подписка на события utilities
   createRecipe(recipe) {
     const deleteButton = createElement(
       'button',
@@ -142,12 +126,12 @@ class View extends EventEmitter {
     const firstIngredient = this.recipeForm.querySelector('.recipe_element_input');
 
     if (
-      this.recipeInput.value.replace(/\s/g, '') !== '' &&
-      firstIngredient.value.replace(/\s/g, '') !== ''
+      this.recipeInput.value.replace(REPLACE_VOIDS, '') !== '' &&
+      firstIngredient.value.replace(REPLACE_VOIDS, '') !== ''
     ) {
-      this.emit('addRecipe', this.recipeInput.value);
+      this.emit(ADD_RECIPE, this.recipeInput.value);
     } else {
-      myAlert(`Заполни, пожалуйста, обязательные поля!`);
+      myAlert(ERROR_EMPTY_INPUT);
     }
   }
 
@@ -156,7 +140,7 @@ class View extends EventEmitter {
     const listRecipe = recipe.target.parentNode;
     const id = Number(listRecipe.getAttribute('data-id'));
 
-    this.emit('deleteRecipe', id);
+    this.emit(DELETE_RECIPE, id);
   }
 
   // отображение заранее созданных рецептов(из памяти)
@@ -191,7 +175,7 @@ class View extends EventEmitter {
 
   // МЕТОДЫ ДЛЯ РАБОТЫ С ПРЕДМЕТАМИ
 
-  // метод создания рецепта как DOM элемент + подписка на события DnD
+  // метод создания рецепта как DOM элемент + подписка на события utilities
   createItem(item) {
     const deleteButton = createElement('button', { className: 'delete_button' }, 'Удалить');
     const listItem = createElement(
@@ -228,10 +212,10 @@ class View extends EventEmitter {
   handleAddItem(event) {
     event.preventDefault();
 
-    if (this.itemInput.value.replace(/\s/g, '') !== '') {
-      this.emit('addItem', this.itemInput.value);
+    if (this.itemInput.value.replace(REPLACE_VOIDS, '') !== '') {
+      this.emit(ADD_ITEM, this.itemInput.value);
     } else {
-      myAlert(`Заполни, пожалуйста, обязательное поле!`);
+      myAlert(ERROR_EMPTY_INPUT);
     }
   }
 
@@ -240,7 +224,7 @@ class View extends EventEmitter {
     const listItem = item.target.parentNode;
     const id = Number(listItem.getAttribute('data-id'));
 
-    this.emit('deleteItem', id);
+    this.emit(DELETE_ITEM, id);
   }
 
   // отображение заранее созданных предметов(из памяти)
@@ -264,6 +248,44 @@ class View extends EventEmitter {
     const listItem = this.findItem(id);
 
     this.itemList.removeChild(listItem);
+  }
+
+  // ОБЪЯВЛЕНИЯ ДЛЯ КОНУСТРУКТОРА
+
+  declarationsAboutRecipes() {
+    this.recipeForm = document.querySelector('.create_recipe_area');
+    this.recipeInput = document.querySelector('#create_recipe_input');
+    this.recipeList = document.querySelector('#recipes_container');
+    this.recipeAddInputButton = this.recipeForm.querySelector('.plus_element');
+
+    this.recipeForm.addEventListener('submit', this.handleAddRecipe.bind(this));
+    this.recipeAddInputButton.addEventListener('click', this.handleAddInput.bind(this));
+
+    // подписка зоны верстака для рецепта на события DnD
+    this.recipeArea = document.querySelector('#workbench_recipe_container');
+    this.recipeArea.addEventListener('dragover', dragOverForRecipe.bind(this.recipeArea));
+    this.recipeArea.addEventListener('drop', drop.bind(this, this.recipeArea, this.recipeList));
+    this.recipeArea.addEventListener(
+      'dragleave',
+      drop.bind(this, this.recipeList, this.recipeArea)
+    );
+  }
+
+  declarationsAboutItems() {
+    this.itemForm = document.querySelector('.create_item_area');
+    this.itemInput = document.querySelector('#create_item_input');
+    this.itemList = document.querySelector('#items_container');
+
+    this.itemForm.addEventListener('submit', this.handleAddItem.bind(this));
+
+    // подписка зоны верстака для предметов на события DnD
+    this.itemArea = document.querySelector('#workbench_items_container');
+    this.itemArea.addEventListener('dragover', event => event.preventDefault());
+    this.itemArea.addEventListener('drop', drop.bind(this, this.itemArea, this.itemList));
+    this.itemArea.addEventListener('dragleave', drop.bind(this, this.itemList, this.itemArea));
+
+    this.craftingButton = document.querySelector('.create_recipe_item');
+    this.craftingButton.addEventListener('click', this.handleCraftNewItem.bind(this));
   }
 }
 

@@ -30,7 +30,7 @@ export function showIngredients(id) {
     this.recipeArea.querySelector(`[data-id="${id}"]`);
   const ingredients = item.querySelector('.recipe_elements');
   if (ingredients.style.display === 'block') {
-    ingredients.style.display = '';
+    ingredients.style.display = 'none';
   } else {
     ingredients.style.display = 'block';
   }
@@ -46,5 +46,5 @@ export function drop(area, items) {
 
 // проверка на наличие рецепта в верстаке
 export function dragOverForRecipe(event) {
-  return this.recipeArea.children.length > 0 || event.preventDefault();
+  return this.children.length > 0 || event.preventDefault();
 }

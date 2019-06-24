@@ -15,8 +15,6 @@ li {
   text-align: center;
   height: fit-content;
   min-height: 80px;
-  transition-duration: 2s;
-  transition-property: visibility;
 }
 
 .messages_area h2 {

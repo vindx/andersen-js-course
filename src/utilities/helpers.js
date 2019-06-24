@@ -19,35 +19,16 @@ function createElement(tag, props, ...children) {
   return element;
 }
 
-class EventEmitter {
-  constructor(events = {}) {
-    this.events = events;
-  }
-
-  on(type, listener) {
-    this.events[type] = this.events[type] || [];
-    this.events[type].push(listener);
-  }
-
-  emit(type, arg) {
-    if (this.events[type]) {
-      this.events[type].forEach(listener => listener(arg));
-    }
-  }
-}
-
 function myAlert(string) {
   const messageArea = document.querySelector('.messages_area');
   const alertMessage = messageArea.querySelector('h2');
   alertMessage.textContent = string;
   if (messageArea.style.visibility === 'hidden') {
-    messageArea.style.visibility = '';
-  } else {
-    messageArea.style.visibility = 'hidden';
+    messageArea.style.visibility = 'visible';
   }
   setTimeout(function abc() {
     messageArea.style.visibility = 'hidden';
-  }, 1000);
+  }, 2000);
 }
 
-export { createElement, EventEmitter, myAlert };
+export { createElement, myAlert };

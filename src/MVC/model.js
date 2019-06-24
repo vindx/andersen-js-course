@@ -1,4 +1,4 @@
-import { EventEmitter } from '../helpers';
+import EventEmitter from '../EventEmitter/EventEmitter';
 
 class Model extends EventEmitter {
   constructor(recipes = [], items = []) {
