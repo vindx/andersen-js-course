@@ -1,0 +1,34 @@
+function createElement(tag, props, ...children) {
+  const element = document.createElement(tag);
+
+  Object.keys(props).forEach(key => {
+    if (key.includes('data-id') || key.includes('ondrag')) {
+      element.setAttribute(key, props[key]);
+    }
+    element[key] = props[key];
+  });
+
+  children.forEach(child => {
+    if (typeof child === 'string') {
+      element.appendChild(document.createTextNode(child));
+    } else {
+      element.appendChild(child);
+    }
+  });
+
+  return element;
+}
+
+function myAlert(string) {
+  const messageArea = document.querySelector('.messages_area');
+  const alertMessage = messageArea.querySelector('h2');
+  alertMessage.textContent = string;
+  if (messageArea.style.visibility === 'hidden') {
+    messageArea.style.visibility = 'visible';
+  }
+  setTimeout(function abc() {
+    messageArea.style.visibility = 'hidden';
+  }, 2000);
+}
+
+export { createElement, myAlert };

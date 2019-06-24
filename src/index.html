@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Andersen JS Course</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Мастерская</title>
   </head>
   <body>
-    <h1>
-      Andersen JS Course
-    </h1>
+    <div class="messages_area">
+      <h2>Добро пожаловать в мастерскую.</h2>
+    </div>
+    <div class="wrapper">
+      <div class="recipes">
+        <h3>Рецепты</h3>
+        <div id="recipes_container"></div>
+        <form class="create_recipe_area">
+          <label>
+            Новый предмет
+            <input id="create_recipe_input" type="text" placeholder="Обязательно к заполнению" />
+            Ингредиенты
+            <input class="plus_element" type="button" value="+" />
+            <input class="recipe_element_input" placeholder="Обязательно к заполнению" />
+          </label>
+          <button class="create_recipe">Добавить рецепт</button>
+        </form>
+      </div>
+
+      <div class="workbench">
+        <h3>Верстак</h3>
+        <div class="crafting_area">
+          <div class="recipe_area">
+            <p>↓ Рецепт ↓</p>
+            <div id="workbench_recipe_container"></div>
+          </div>
+          <div class="items_area">
+            <p>↓ Предметы ↓</p>
+            <div id="workbench_items_container"></div>
+          </div>
+        </div>
+        <button class="create_recipe_item">Создать предмет</button>
+      </div>
+
+      <div class="items">
+        <h3>Предметы</h3>
+        <div id="items_container"></div>
+        <form class="create_item_area">
+          <label>
+            Новый предмет
+            <input id="create_item_input" type="text" placeholder="Обязательно к заполнению" />
+          </label>
+          <button class="create_item">Добавить предмет</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

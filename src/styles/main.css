@@ -3,6 +3,173 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.messages_area {
   text-align: center;
+  height: fit-content;
+  min-height: 80px;
+}
+
+.messages_area h2 {
+  display: inline-block;
+  border-bottom: 3px solid #fcac45;
+  padding-bottom: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.recipes {
+  height: fit-content;
+  text-align: center;
+  width: 25%;
+  border: 1px solid black;
+}
+
+.recipe {
+  border: 1px solid #fcac45;
+  margin: 1%;
+  padding: 1%;
+  font-size: 20px;
+  text-align: left;
+  word-break: break-word;
+  position: relative;
+}
+
+.recipe_elements {
+  margin: 0;
+  font-size: 15px;
+  padding-left: 10%;
+  display: none;
+}
+
+.recipe button,
+.item button {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.recipe:hover .delete_button {
+  display: block;
+}
+
+.create_recipe,
+.create_item,
+.create_recipe_item {
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.workbench {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: fit-content;
+  width: 40%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.crafting_area {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recipe_area {
+  width: 50%;
+}
+
+.items_area {
+  width: 50%;
+  border-left: 1px solid black;
+}
+
+#workbench_items_container,
+#workbench_recipe_container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+#workbench_recipe_container {
+  justify-content: center;
+}
+
+.items_area:hover .item .delete_button {
+  display: none;
+}
+
+.recipe_area:hover .recipe .delete_button {
+  display: none;
+}
+
+.item {
+  text-align: left;
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid #fcac45;
+  font-size: 20px;
+  word-break: break-word;
+  position: relative;
+}
+
+.items {
+  height: fit-content;
+  text-align: center;
+  width: 25%;
+  border: 1px solid black;
+}
+
+.create_item_area,
+.create_recipe_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  border-top: 1px solid black;
+  padding-top: 1%;
+}
+
+#create_recipe_input,
+#create_item_input {
+  width: 85%;
+  text-align: center;
+}
+
+.recipe_element_input {
+  text-align: center;
+  width: 70%;
+}
+
+.create_recipe_area label {
+  position: relative;
+}
+
+.plus_element {
+  position: absolute;
+  bottom: 0;
+  left: 86%;
+}
+
+.item:hover .delete_button {
+  display: block;
 }
