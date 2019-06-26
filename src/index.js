@@ -5,7 +5,11 @@ import './styles/main.css';
 // foo(5, createCb('cb'));
 // foo(20, createCb('cb'));
 
-import { parseJson, successCb, failureCd } from './asynchronous-programming/task2';
+// import { parseJson, successCb, failureCd } from './asynchronous-programming/task2';
+//
+// parseJson(`{"x": 10}`, successCb, failureCd);
+// parseJson(`{x}`, successCb, failureCd);
 
-parseJson(`{"x": 10}`, successCb, failureCd);
-parseJson(`{x}`, successCb, failureCd);
+import delay from './asynchronous-programming/task3';
+
+delay(1000).then(value => console.log(`Done with ${value}`));
