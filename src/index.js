@@ -10,6 +10,10 @@ import './styles/main.css';
 // parseJson(`{"x": 10}`, successCb, failureCd);
 // parseJson(`{x}`, successCb, failureCd);
 
-import delay from './asynchronous-programming/task3';
+// import delay from './asynchronous-programming/task3';
+//
+// delay(1000).then(value => console.log(`Done with ${value}`));
 
-delay(1000).then(value => console.log(`Done with ${value}`));
+import doubleRequest from './asynchronous-programming/task4';
+
+doubleRequest();
