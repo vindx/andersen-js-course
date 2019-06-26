@@ -14,6 +14,10 @@ import './styles/main.css';
 //
 // delay(1000).then(value => console.log(`Done with ${value}`));
 
-import doubleRequest from './asynchronous-programming/task4';
+// import doubleRequest from './asynchronous-programming/task4';
+//
+// doubleRequest();
 
-doubleRequest();
+import printDataFromUrls from './asynchronous-programming/task5';
+
+printDataFromUrls();
