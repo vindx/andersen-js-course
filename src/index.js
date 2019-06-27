@@ -18,6 +18,8 @@ import './styles/main.css';
 //
 // doubleRequest();
 
-import printDataFromUrls from './asynchronous-programming/task5';
+// import printDataFromUrls from './asynchronous-programming/task5';
+//
+// printDataFromUrls();
 
-printDataFromUrls();
+import './asynchronous-programming/task6';
