@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import './styles/main.css';
 
 // import { foo, createCb } from './asynchronous-programming/task1';
@@ -22,4 +23,8 @@ import './styles/main.css';
 //
 // printDataFromUrls();
 
-import './asynchronous-programming/task6';
+// import './asynchronous-programming/task6';
+
+import foo from './asynchronous-programming/task7';
+
+foo();
