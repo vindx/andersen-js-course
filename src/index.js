@@ -25,6 +25,11 @@ import './styles/main.css';
 
 // import './asynchronous-programming/task6';
 
-import foo from './asynchronous-programming/task7';
+// import foo from './asynchronous-programming/task7';
+//
+// foo();
 
-foo();
+import foo from './asynchronous-programming/task8';
+
+foo('https://jsonplaceholder.typicode.com/users');
+foo('ht://jsonplaceholder.typicode.com/users');
