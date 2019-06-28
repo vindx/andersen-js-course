@@ -29,7 +29,11 @@ import './styles/main.css';
 //
 // foo();
 
-import foo from './asynchronous-programming/task8';
+// import foo from './asynchronous-programming/task8';
+//
+// foo('https://jsonplaceholder.typicode.com/users');
+// foo('ht://jsonplaceholder.typicode.com/users');
 
-foo('https://jsonplaceholder.typicode.com/users');
-foo('ht://jsonplaceholder.typicode.com/users');
+import foo from './asynchronous-programming/task9';
+
+foo();
