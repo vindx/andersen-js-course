@@ -34,6 +34,11 @@ import './styles/main.css';
 // foo('https://jsonplaceholder.typicode.com/users');
 // foo('ht://jsonplaceholder.typicode.com/users');
 
-import foo from './asynchronous-programming/task9';
+// import foo from './asynchronous-programming/task9';
+//
+// foo();
 
-foo();
+import Musician from './asynchronous-programming/task10';
+
+const musician = new Musician('https://jsonplaceholder.typicode.com/albums');
+musician.getAlbums().then(albums => console.log(albums));
