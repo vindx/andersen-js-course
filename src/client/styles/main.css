@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.main_name {
+  text-align: center;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 3% auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spreadsheet_of_elements {
+  width: 75%;
+  margin-top: 3%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.element_block {
+  border: 1px solid darkgoldenrod;
+  min-height: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.elements {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.element_block p {
+  margin: 0;
+}
+
+.element_buttons {
+  position: absolute;
+  right: 1%;
+}
