@@ -33,14 +33,24 @@ button:hover {
 }
 
 .spreadsheet_of_elements {
-  width: 75%;
+  width: 80%;
   margin-top: 3%;
   height: fit-content;
-  display: flex;
-  flex-direction: column;
 }
 
 .element_block {
+  border-radius: 10px;
+}
+
+.sub_elements {
+  justify-content: center;
+  margin: auto 10%;
+  display: none;
+}
+
+.element_header {
+  margin: 1% auto;
+  border-radius: 10px;
   border: 1px solid darkgoldenrod;
   min-height: 30px;
   position: relative;
@@ -50,14 +60,17 @@ button:hover {
 }
 
 .elements {
-  width: 70%;
+  width: 100%;
+  padding-right: 150px;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
 }
 
 .element_block p {
-  margin: 0;
+  word-break: break-word;
+  margin: 0 1%;
 }
 
 .element_buttons {
