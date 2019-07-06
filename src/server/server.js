@@ -11,8 +11,16 @@ app.use(cors());
 
 // import Routes
 const departmentsRoute = require('./routes/departments');
+const officesRoute = require('./routes/offices');
 
-app.use('/', departmentsRoute);
+app.use('/departments', departmentsRoute);
+app.use('/offices', officesRoute);
+
+app.get('/', (req, res) => {
+  res.send(
+    `Welcome to my first server ;) <br> You may use: <br> <br>"/departments" for seeing JSON of departments!<br>"/departments/:departmentId" for seeing JSON of a particular department!<br> <br>"/offices" for seeing JSON of offices!<br> "/offices/:departmentId" for seeing JSON of offices of a particular department!`
+  );
+});
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () =>
   console.log('connected to DB!')
